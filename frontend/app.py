@@ -1,7 +1,3 @@
-# ============================================================
-# STEP 8: STREAMLIT DASHBOARD
-# Run: streamlit run frontend/app.py
-# ============================================================
 
 import streamlit as st
 import requests
