@@ -103,7 +103,7 @@ st.markdown("""
 """, unsafe_allow_html=True)
 
 # ── Config ────────────────────────────────────────────────
-API_BASE = "http://localhost:8000"
+API_BASE = "https://pandemic-api.onrender.com"
 
 # ── Helpers ───────────────────────────────────────────────
 def api_call(endpoint, method='GET', data=None):
