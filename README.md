@@ -40,7 +40,6 @@
 - [Dataset](#-dataset)
 - [Deployment](#-deployment)
 - [CI/CD Pipeline](#-cicd-pipeline)
-- [Interview Explanation](#-interview-explanation)
 - [Contributing](#-contributing)
 - [License](#-license)
 
