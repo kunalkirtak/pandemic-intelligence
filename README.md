@@ -293,6 +293,7 @@ data/raw/
 
 ```bash
 # Step 1-6: Data → Models (run in order)
+All in pandemic-project.ipynb
 python notebook/01_data_cleaning.py
 python notebook/02_feature_engineering.py
 python notebook/03_eda.py
