@@ -254,8 +254,8 @@ pandemic-intelligence-system/
 ### 1. Clone the repository
 
 ```bash
-git clone https://github.com/yourusername/pandemic-intelligence-system.git
-cd pandemic-intelligence-system
+git clone https://github.com/kunalkirtak/pandemic-intelligence.git
+cd pandemic-intelligence
 ```
 
 ### 2. Create virtual environment
@@ -294,12 +294,12 @@ data/raw/
 
 ```bash
 # Step 1-6: Data → Models (run in order)
-python notebooks/01_data_cleaning.py
-python notebooks/02_feature_engineering.py
-python notebooks/03_eda.py
-python notebooks/04_time_series_models.py   # Takes 10–30 min (GPU: ~3 min)
-python notebooks/05_anomaly_detection.py
-python notebooks/06_risk_model.py
+python notebook/01_data_cleaning.py
+python notebook/02_feature_engineering.py
+python notebook/03_eda.py
+python notebook/04_time_series_models.py   # Takes 10–30 min (GPU: ~3 min)
+python notebook/05_anomaly_detection.py
+python notebook/06_risk_model.py
 
 # Start API (Terminal 1)
 uvicorn api.main:app --reload --host 0.0.0.0 --port 8000
@@ -745,22 +745,6 @@ Run tests locally:
 ```bash
 pytest tests/ -v --tb=short
 ```
-
----
-
-## 🧠 Interview Explanation
-
-When asked to explain this project in an interview:
-
-> *"I built a multi-module AI system for pandemic intelligence. It starts with a data engineering pipeline that merges six COVID-19 datasets across 187 countries and generates 70+ features including growth rates, doubling times, and lagged case counts.*
->
-> *The forecasting layer uses three tiers: ARIMA as a statistical baseline, Facebook Prophet for seasonality handling, and an LSTM with multi-head attention as the primary model — which reduces RMSE by roughly 60% over ARIMA on held-out test data.*
->
-> *For risk assessment, I built an XGBoost classifier achieving 91% cross-validated accuracy with SHAP explainability so every prediction is interpretable — critical for healthcare use cases. The anomaly detection combines Isolation Forest with an LSTM Autoencoder to flag outbreak surges in real-time.*
->
-> *Everything is deployed as FastAPI REST endpoints, with a Streamlit dashboard, Dockerized with a CI/CD pipeline on GitHub Actions. The full system can serve predictions for any country in under 200ms.*"
-
----
 
 ## 🤝 Contributing
 
